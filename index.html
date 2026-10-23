@@ -9,12 +9,16 @@
   h1 { font-size: 96px; text-align: center; margin: 60px 0 20px; }
   p.sub { font-size: 22px; text-align: center; margin: 10px 0; }
   h2 { margin-top: 60px; }
-  .boxes { display: flex; flex-direction: row; gap: 10px; }
   .boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .box { border: 1px solid #000; padding: 10px; min-width: 0; box-sizing: border-box; }
-  .info { flex: 1; font-size: 13px; }
+  .row { display: flex; gap: 10px; align-items: flex-start; }
+  .info { flex: 1; font-size: 13px; min-width: 0; }
   .row img { width: 35%; display: block; }
-  button { font-family: Consolas, monospace; font-size: 16px; padding: 8px 14px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .btn { font-family: Consolas, monospace; font-size: 13px; padding: 5px 10px; border: 1px solid #000; background: #eee; color: #000; text-decoration: none; cursor: pointer; }
+  .btn:hover { background: #ddd; }
+  .btn.disabled { color: #777; border-color: #777; cursor: default; }
+  .btn.disabled:hover { background: #eee; }
   @media (max-width: 800px) { .boxes { grid-template-columns: 1fr; } }
 </style>
 </head>
@@ -25,7 +29,8 @@
 <p class="sub">our goal is to get our lyrics working on <a href="https://simohypers.github.io/limusic">LiMusic</a> and <a href="https://morphe.software">Morphe YT Music</a></p>
 
 <h2>Category</h2>
-  <div class="boxes">
+<div class="boxes">
+
   <div class="box row">
     <div class="info">
       Title: Fly Away<br>
@@ -33,30 +38,33 @@
       Album: Fly Away - Single<br>
       Explicit: Yes - fucked up, fucking, shit, damn<br>
       LRC Date: 2026-10-20<br>
-      LRC Creator: topoichh (smlrc admin)<br>
-      <p>
-        <button>download hi-res audio (coming soon)</button>
-        <button><a href="https://topoichh.github.io/smlrc/dl/a4_5_minut_nazad_by_a4_shkola_smlrc_by_topoichh.lrc">download lrc</a></button>
-        <button><a href="https://github.com/topoichh/smlrc/raw/refs/heads/main/dl/neb_fly_away_smlrc_by_topoichh.lrc">view raw lrc</a></button>
-      </p>
+      LRC Creator: topoichh (smlrc admin)
+      <div class="btns">
+        <span class="btn disabled">download hi-res audio (coming soon)</span>
+        <a class="btn" href="dl/neb_fly_away_smlrc_by_topoichh.lrc" download>download lrc</a>
+        <a class="btn" href="https://github.com/topoichh/smlrc/raw/refs/heads/main/dl/neb_fly_away_smlrc_by_topoichh.lrc">view raw lrc</a>
+      </div>
     </div>
     <img src="dl/neb_fly_away_cover.jpg" alt="Album cover">
   </div>
-    <div class="box row">
+
+  <div class="box row">
     <div class="info">
       Title: 5 МИНУТ НАЗАД - by A4 - ШКОЛА<br>
       Artist: Владислав "A4" Бумага<br>
       Album: Doesn't exist<br>
       Explicit: Yes - говно (shit), дебил (moron), блят (damn)<br>
       LRC Date: 2026-10-20<br>
-      LRC Creator: topoichh (smlrc admin)<br>
-      <p>
-        <button><a href="dl/neb_fly_away_smlrc_by_topoichh.lrc">download lrc</a></button>
-        <button><a href="https://github.com/topoichh/smlrc/raw/refs/heads/main/dl/a4_5_minut_nazad_by_a4_shkola_smlrc_by_topoichh.lrc">view raw lrc</a></button>
-      </p>
+      LRC Creator: topoichh (smlrc admin)
+      <div class="btns">
+        <span class="btn disabled">download hi-res audio (coming soon)</span>
+        <a class="btn" href="dl/a4_5_minut_nazad_by_a4_shkola_smlrc_by_topoichh.lrc" download>download lrc</a>
+        <a class="btn" href="https://github.com/topoichh/smlrc/raw/refs/heads/main/dl/a4_5_minut_nazad_by_a4_shkola_smlrc_by_topoichh.lrc">view raw lrc</a>
+      </div>
     </div>
     <img src="dl/a4_5_minut-nazad_by_a4_shkola_cover_smlrc_by_topoichh.png" alt="Album cover">
   </div>
+
   <div class="box row">
     <div class="info">
       Title: Мальвина<br>
@@ -64,14 +72,16 @@
       Album: Мальвина<br>
       Explicit: Yes - мариванна (marihuana), никотин (nicotine)<br>
       LRC Date: 2026-09-17<br>
-      LRC Creator: topoichh (smlrc admin)<br>
-      <p>
-        <button><a href="https://topoichh.github.io/smlrc/dl/khalif_malvina_smlrc_by_topoichh.lrc">download lrc</a></button>
-        <button><a href="https://github.com/topoichh/smlrc/raw/refs/heads/main/dl/khalif_malvina_smlrc_by_topoichh.lrc">view raw lrc</a></button>
-      </p>
+      LRC Creator: topoichh (smlrc admin)
+      <div class="btns">
+        <span class="btn disabled">download hi-res audio (coming soon)</span>
+        <a class="btn" href="dl/khalif_malvina_smlrc_by_topoichh.lrc" download>download lrc</a>
+        <a class="btn" href="https://github.com/topoichh/smlrc/raw/refs/heads/main/dl/khalif_malvina_smlrc_by_topoichh.lrc">view raw lrc</a>
+      </div>
     </div>
-    <img src="https://topoichh.github.io/smlrc/dl/khalif_malvina_cover_smlrc_by_topoichh.jpg" alt="Album cover">
+    <img src="dl/khalif_malvina_cover_smlrc_by_topoichh.jpg" alt="Album cover">
   </div>
+
 </div>
 </body>
 </html>
